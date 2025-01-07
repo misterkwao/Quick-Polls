@@ -50,3 +50,14 @@ button{
     transition: 0.2s linear;
    transform: scale(1.1);
 } */
+
+@media (max-width: 950px){
+    .login-cont{
+        width: 90%;
+        text-align: center;
+    }
+    form{
+        width: 90%;
+    }
+
+}

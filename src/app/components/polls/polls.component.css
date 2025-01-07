@@ -141,3 +141,36 @@ textarea{
     border-radius: 8px;
     border: 1px solid #ccc;
 }
+
+@media (max-width: 950px){
+    .login-cont{
+        width: 90%;
+        text-align: center;
+    }
+    form{
+        width: 90%;
+    }
+    .card{
+        width: 100%;
+    }
+    .create-btn1{
+        width: 20%;
+    }
+    .details-card{
+        position: absolute;
+        background-color: #ffffff;
+        width: 90%;
+        padding: 25px;
+        border-radius: 16px;
+        /* display: flex;
+        flex-direction: column;
+        justify-content: space-around; */
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+    .create-btn{
+        width: 100%;
+    }
+    form{
+        width: 100%;
+    }
+}

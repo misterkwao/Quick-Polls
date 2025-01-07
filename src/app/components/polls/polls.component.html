@@ -2,7 +2,7 @@
     <div class="top">
         <h4>Active Polls</h4>
         <input class='search' type="search" placeholder="Search poll" [(ngModel)]="searchValue">
-        <button (click)="showCreate()">Create</button>
+        <button (click)="showCreate()" class="create-btn1">Create</button>
     </div>
     <div class="cards-cont">
         @for(item of all_polls | search : searchValue; track item){
