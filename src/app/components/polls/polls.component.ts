@@ -46,7 +46,12 @@ export class PollsComponent {
   }
 
   addOpt(option:string){
-    this.options.push({"text": option})
+    if(option !== ''){
+      this.options.push({"text": option})
+    }
+    else(
+      alert("Option cant be empty")
+    )
   }
 
   createPost(question:string): void{
