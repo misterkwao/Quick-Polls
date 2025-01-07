@@ -1,0 +1,25 @@
+<div class="details-container">
+    @if(poll){
+        <div class="details-card">
+        <span class="question">{{poll.question}}</span>
+        <div class="options">
+            @for(opt of poll.options; track opt){
+                <ol>
+                    <li style="display: flex; flex-direction: column;"><span>Option: {{opt.text}} </span> <span>Total: {{opt.votes_count}}</span></li>
+                </ol>
+            }
+        </div>
+            <form #Pollform="ngForm" (ngSubmit)="vote()">
+            <h5>Select your option</h5>
+            <div class="options">
+                @for(opt of poll.options; track opt){
+                    <input type="radio" name={{opt.text}} id={{opt.poll_id}} value={{opt.id}} [(ngModel)]="selectedOption" required>
+                    <label for="html">{{opt.text}}</label><br>
+                }
+            </div>
+            <button [disabled]="Pollform.invalid">Vote</button>
+        </form>
+        </div>
+    }
+    
+</div>

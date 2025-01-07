@@ -1,0 +1,10 @@
+<div class="main-container">
+    <div class="login-cont">
+        <h1>Welcome to QuickPolls</h1>
+        <p>Fastest and simpliest way to create and view poll results</p>
+        <form #logInform="ngForm" (ngSubmit)="navToHome(username.value)">
+            <input type="text" placeholder="Username" name="username" #username="ngModel" ngModel required>
+            <button [disabled]="logInform.invalid">Let's begin</button>
+        </form>
+    </div>
+</div>

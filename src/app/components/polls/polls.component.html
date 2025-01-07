@@ -1,0 +1,43 @@
+<div class="poll-card">
+    <div class="top">
+        <h4>Active Polls</h4>
+        <input class='search' type="search" placeholder="Search poll" [(ngModel)]="searchValue">
+        <button (click)="showCreate()">Create</button>
+    </div>
+    <div class="cards-cont">
+        @for(item of all_polls | search : searchValue; track item){
+           <div class="card">
+            <span class="question">{{item.question}}</span>
+            <button class="card-btn" (click)="showPoll(item.id)">Details</button>
+        </div> 
+        } 
+    </div>
+
+    @if(show_create){
+        <div class="details-bg">
+          <div class="details-card">
+            <div class="details-header">
+                <span>Create Poll</span>
+                <span style="cursor: pointer;" (click)="showCreate()">X</span>
+            </div>
+            <form #createform="ngForm" (ngSubmit)="createPost(question.value)">
+                <label for="Question">Question:</label>
+                <textarea name="question" #question="ngModel" ngModel required></textarea>
+                <label for="Question">Options:</label>
+                <div class="opts">
+                    <input class="option-field" type="text" name="optValue" #optValue="ngModel" ngModel required>
+                    <span class="add" (click)="addOpt(optValue.value)">+</span>
+                </div>
+                <div class="user-options">
+                    @for(opt of options; track opt){
+                        <ul>
+                            <li>{{opt.text}}</li>
+                        </ul>
+                    }
+                </div>
+                <button [disabled]="createform.invalid" class="create-btn">Create Poll</button>
+            </form>
+          </div>
+        </div>
+    }
+</div>

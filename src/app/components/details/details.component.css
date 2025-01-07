@@ -1,0 +1,54 @@
+.details-container{
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+.details-card{
+    padding: 15px;
+    max-height: 300px;
+    width: 500px;
+    background-color: rgba(255, 255, 255, 0.685);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.question{
+    font-weight: 600;
+    font-size: 20px;
+    width: 100%;
+    max-height: 100px;
+}
+input{
+    margin-bottom: 8px;
+}
+.options{
+    padding: 8px;
+    width: 80%;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    background-color: whitesmoke;
+    height: 80px;
+    max-height: 150px;
+    margin: 5px;
+    border-radius: 8px;
+}
+
+button{
+    margin-top: 10px;
+    padding: 12px;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 18px;
+    width: 80%;
+}
