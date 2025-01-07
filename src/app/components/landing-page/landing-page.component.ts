@@ -16,8 +16,7 @@ export class LandingPageComponent {
   constructor(private router:Router,private sharedService: SharedService){}
   navToHome(username:string){
     console.log(username)
-    this.username = username;
-    this.sharedService.getUser(this.username);
+    this.sharedService.getUser(username);
     this.router.navigateByUrl('/home/polls')
   }
 }
